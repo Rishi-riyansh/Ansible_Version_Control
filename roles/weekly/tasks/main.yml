@@ -1,0 +1,6 @@
+---
+- name: Reboot system weekly
+  cron:
+    name: Reboot
+    special_time: weekly
+    job: "/home/minduser/myplatform/reboot.sh"
