@@ -3,4 +3,4 @@
   cron:
     name: Reboot
     special_time: weekly
-    job: "/home/minduser/myplatform/reboot.sh"
+    job: "sudo systemctl reboot"
