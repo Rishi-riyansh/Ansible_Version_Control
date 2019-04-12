@@ -2,6 +2,6 @@
 - hosts: me
   roles:
   - github
-  sudo: yes
+  become: no
   gather_facts: no
 
