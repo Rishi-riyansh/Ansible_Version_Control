@@ -1,0 +1,16 @@
+---
+## Web Servers
+- hosts: apache
+  roles:
+    - webserver
+    - weekly
+  sudo: yes
+  gather_facts: no
+
+- hosts: me
+  roles:
+  - github
+  sudo: yes
+  gather_facts: no
+
+
