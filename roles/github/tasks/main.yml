@@ -7,5 +7,17 @@
     group: minduser
     mode: 0777
 
-- name: Push the playbooks to github from the roles
-  shell: bash /home/minduser/myplatform/gitpush.sh 2> /home/minduser/myplatform/output.txt
+- name: Add files to local repository
+  shell: git add .
+  args:
+    chdir: /home/minduser/myplatform
+
+- name: Commit changes
+  shell: git commit -m "new release"
+  args:
+    chdir: /home/minduser/myplatform
+
+- name: Push to repo
+  shell: git push origin master
+  args:
+    chdir: /home/minduser/myplatform
