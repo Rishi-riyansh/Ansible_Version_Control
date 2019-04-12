@@ -1,3 +1,11 @@
 ---
+- name: example copying file with owner and permissions
+  copy:
+    src: /home/minduser/myplatform/gitpush.sh
+    dest: /home/minduser/myplatform/
+    owner: minduser
+    group: minduser
+    mode: 0777
+
 - name: Push the playbooks to github from the roles
   shell: bash /home/minduser/myplatform/gitpush.sh 2> /home/minduser/myplatform/output.txt
