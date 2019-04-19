@@ -1,12 +1,4 @@
 ---
-- name: example copying file with owner and permissions
-  copy:
-    src: /home/minduser/myplatform/gitpush.sh
-    dest: /home/minduser/myplatform/
-    owner: minduser
-    group: minduser
-    mode: 0777
-
 - name: Add files to local repository
   shell: git add .
   args:
@@ -18,6 +10,6 @@
     chdir: /home/minduser/myplatform
 
 - name: Push to repo
-  shell: git push origin master
+  shell: git push {{ origin }} master
   args:
     chdir: /home/minduser/myplatform
