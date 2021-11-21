@@ -4,13 +4,11 @@
   roles:
     - webserver
     - weekly
-  sudo: yes
-  gather_facts: no
+  become: yes
 
 - hosts: me
   roles:
   - github
-  sudo: yes
-  gather_facts: no
+  become: yes
 
 
